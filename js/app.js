@@ -28,7 +28,7 @@ $(document).ready(function() {
         var captionText = $(this).children().attr('alt');
         $caption.text(captionText);
         
-        $($overlay).show();
+        $($overlay).show('slow');
     })
     
     // Hides overlay when user clicks on it
