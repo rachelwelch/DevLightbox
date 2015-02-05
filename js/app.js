@@ -19,7 +19,6 @@ $(document).ready(function() {
     // Shows overlay when user clicks on image
     $('#imageGallery a').on('click', function(event) {
       event.preventDefault();
-        console.log('event prevented');
         
         var location = $(this).attr('href');
         $img.attr('src', location);
