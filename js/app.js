@@ -12,9 +12,11 @@ $(document).ready(function() {
     
     var $overlay = $('<div id="overlay"></div>');
     var $img = $('<img>');
+    var $caption = $('<p></p>');
     
     $('body').append($overlay);
     $($overlay).append($img);
+    $($overlay).append($caption);
     
     // Shows overlay when user clicks on image
     $('#imageGallery a').on('click', function(event) {
@@ -22,6 +24,9 @@ $(document).ready(function() {
         
         var location = $(this).attr('href');
         $img.attr('src', location);
+        
+        var captionText = $(this).children().attr('alt');
+        $caption.text(captionText);
         
         $($overlay).show();
     })
